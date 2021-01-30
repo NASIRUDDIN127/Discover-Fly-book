@@ -111,14 +111,16 @@
 
     <!--Thank You-->
     <script>
+        // booking button event handler
         const bookingBtn = document.getElementById("booking");
         bookingBtn.addEventListener("click", function(){
-            const bookingArea = document.getElementById("booking-area");
-            bookingArea.style.display = "none";
+        const bookingArea = document.getElementById("booking-area");
+        bookingArea.style.display = "none";
         })
 
- function handleProductChange(product, isIncrease) {
 
+        //here, eco=economy class and first= first class
+ function handleProductChange(product, isIncrease) {
                 const productCount = getInputValue(product);
                 let productNewCount = productCount;
                 if (isIncrease == true) {
@@ -135,8 +137,6 @@
                 if (product == 'eco') {
                     productTotal = productNewCount * 100;
                 }
-
-               // document.getElementById(product + '-total').innerText = '$' + productTotal;
                 calculateTotal();
             }
 
@@ -182,9 +182,6 @@
                  //}
                 // ecoInput.value = ecoNewCount;
            // }
-
-
-
 
 
       // document.getElementById('eco-increase').addEventListener('click', function() {
